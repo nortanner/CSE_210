@@ -24,20 +24,20 @@ def main():
         display_board(board)
 
         # allow the player to make a move
-        move = make_move(player, board)
+        make_move(player, board)
 
         end = is_winner(board)
         
         if end == False:
             end = is_draw(board)
-
-        # pick the next player
-        player = next_player(player)
+        
+            # pick the next player
+            player = next_player(player)
 
     # display the final board
     display_board(board)
     # show message for winner and thanks for playing
-    print("Good game! Thanks for playing!")
+    print(f"{player.capitalize()} wins! Good game! Thanks for playing!")
 
 def create_board():
     ''' Creates a list that holds the spots on the board
@@ -64,9 +64,17 @@ def display_board(board):
 def is_winner(board):
     ''' return: True if someone won, False if there is no winner '''
 
-    
-
-    return False
+    if (board[0] == board[1] == board[2] or
+        board[3] == board[4] == board[5] or
+        board[6] == board[7] == board[8] or
+        board[0] == board[3] == board[6] or
+        board[1] == board[4] == board[7] or
+        board[2] == board[5] == board[8] or
+        board[0] == board[4] == board[8] or
+        board[2] == board[4] == board[6]):
+        return True
+    else:
+        return False
 
 
 def is_draw(board):
@@ -96,7 +104,8 @@ def make_move(player, board):
         else:
             board[move - 1] = player
     except ValueError:
-        print("Invalid move. Try again.")
+        print("Invalid move. Please try again.")
+        display_board(board)
         make_move(player, board)
     
 

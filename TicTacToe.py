@@ -1,6 +1,6 @@
 '''
 Solo Checkpoint 02
-Author: Bro. Hayes
+Author: Tanner Norton
 '''
 
 def main():

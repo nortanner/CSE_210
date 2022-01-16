@@ -37,7 +37,7 @@ def main():
     # display the final board
     display_board(board)
     # show message for winner and thanks for playing
-    print(f"{player.capitalize()} wins! Good game! Thanks for playing!")
+    print("Good game! Thanks for playing!")
 
 def create_board():
     ''' Creates a list that holds the spots on the board

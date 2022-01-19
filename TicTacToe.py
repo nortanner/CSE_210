@@ -1,6 +1,6 @@
 '''
 Solo Checkpoint 02
-Author: Tanner Norton
+Author: Tanner Norton 
 '''
 
 def main():

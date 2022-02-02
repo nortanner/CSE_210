@@ -1,5 +1,3 @@
-import random
-
 class Seeker:
     """The person looking for the Hider. 
     

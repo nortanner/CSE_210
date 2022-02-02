@@ -7,7 +7,7 @@ class Seeker:
         location (int): The location of the Seeker (1-1000).
     """
     def __init__(self):
-        self.location = 0
+        self._location = 0
         """Constructs a new Seeker.
 
         Args:
@@ -20,7 +20,7 @@ class Seeker:
         Returns:
             number: The current location,
         """
-        return self.location
+        return self._location
         
     def move_location(self, location):
         """Moves to the given location.
@@ -29,4 +29,4 @@ class Seeker:
             self (Seeker): An instance of Seeker.
             location (int): The given location.
         """
-        self.location = location
+        self._location = location

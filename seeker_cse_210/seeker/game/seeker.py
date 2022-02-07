@@ -1,3 +1,5 @@
+import random
+
 class Seeker:
     """The person looking for the Hider. 
     
@@ -7,7 +9,7 @@ class Seeker:
         location (int): The location of the Seeker (1-1000).
     """
     def __init__(self):
-        self._location = 0
+        self._location = random.randint(1, 1000)
         """Constructs a new Seeker.
 
         Args:
